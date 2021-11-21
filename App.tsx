@@ -1,12 +1,25 @@
 import React, { useEffect } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Keyboard, View } from 'react-native';
 import { DigtalReciept } from './src/components/DigitalReceipt';
 
 export default function App() {
 
   return (
-    <View style={styles.container}>
-      <DigtalReciept categoryTags={['d', 'a', 'c', 'b', 'e']}/>
+    <View style={styles.container} onTouchStart={() => {Keyboard.dismiss()}}>
+      <DigtalReciept categoryTags={
+        [
+          "select",
+          "fun",
+          "random thing i bought",
+          "groceries",
+          "i needed to buy this",
+          "takeout",
+          "alcohol",
+          "uber",
+          "date",
+        ]
+      }
+    />
     </View>
   );
 }
